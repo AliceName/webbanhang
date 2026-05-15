@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Tiết Sản Phẩm</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand text-warning" href="../index.html"><i class="bi bi-flower2"></i> ALICE STORE</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Trang Chủ</a></li>
+          <li class="nav-item"><a class="nav-link active" href="san-pham.html">Sản phẩm</a></li>
+          <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên Hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row bg-white p-4 shadow-sm rounded">
+      <div class="col-md-5">
+        <img id="main-img" src="" class="img-fluid rounded border mb-3" alt="Sản phẩm chính">
+        <div id="thumb-container" class="d-flex gap-2 flex-wrap">
+        </div>
+      </div>
+
+      <div class="col-md-7">
+        <h2 id="pro-name">Đang tải...</h2>
+        <div class="text-danger fs-3 fw-bold mb-3" id="pro-price"></div>
+        <p class="text-muted" id="pro-desc"></p>
+        <hr>
+        <div class="mb-4">
+          <div class="d-flex align-items-center justify-content-between justify-content-md-start">
+            <span class="me-3 fw-bold text-muted">Số Lượng</span>
+            <div class="input-group" style="width: 130px;">
+              <button class="btn btn-outline-secondary" type="button"
+                onclick="this.parentNode.querySelector('input').stepDown()">-</button>
+              <input type="number" class="form-control text-center fw-bold text-danger shadow-none" value="1" min="1"
+                readonly>
+              <button class="btn btn-outline-secondary" type="button"
+                onclick="this.parentNode.querySelector('input').stepUp()">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <button class="btn btn-danger btn-lg px-5 text-uppercase fw-bold shadow-sm">Mua ngay</button>
+          <a href="san-pham.html" class="btn btn-outline-secondary btn-lg shadow-sm">Quay lại</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 1. Cập nhật Database: Thêm mảng "images" thay vì 1 ảnh đơn
+    const database = {
+      "1": {
+        name: "Vòng Cổ Butterfly Tinh Tế",
+        price: "129.000₫",
+        desc: "Thiết kế hai lớp dây mảnh tinh tế, chất liệu Titan không gỉ. Đảm bảo không bay màu, an toàn cho da.",
+        images: [
+          "../images/buom-vong-co_1.jpg",
+          "../images/buom-vong-co_2.jpg",
+          "../images/buom-vong-co.jpg"
+        ]
+      },
+      "2": {
+        name: "Vòng Cổ Phù Thủy Xứ Oz",
+        price: "350.000₫",
+        desc: "Phong cách Niche Hot Girl, tua rua cá tính, bền màu. Phù hợp đi tiệc và dạo phố.",
+        images: [
+          "../images/xinh-vong-co_2.jpg",
+          "../images/xinh-vong-co_1.jpg",
+          "../images/xinh-vong-co.jpg"
+        ]
+      },
+      "3": {
+        name: "Lắc Tay Bạc S925",
+        price: "490.000₫",
+        desc: "Đính đá Zircon sang trọng, bảo hành làm sáng trọn đời. Bạc nguyên chất S925 chuẩn quốc tế.",
+        images: [
+          "../images/lac-bi-bac-1.jpg",
+          "../images/lac-bi-bac.jpg",
+          "../images/lac-bi-bac-2.jpg"
+        ]
+      }
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+
+    if (productId && database[productId]) {
+      const item = database[productId];
+
+      // Đổ dữ liệu chữ
+      document.getElementById('pro-name').innerText = item.name;
+      document.getElementById('pro-price').innerText = item.price;
+      document.getElementById('pro-desc').innerText = item.desc;
+      document.title = item.name + " | ALICE STORE";
+
+      // Đổ ảnh chính
+      const mainImg = document.getElementById('main-img');
+      mainImg.src = item.images[0];
+
+      // Đổ ảnh nhỏ (thumbnails)
+      const thumbContainer = document.getElementById('thumb-container');
+      item.images.forEach((imgUrl, index) => {
+        const imgObj = document.createElement('img');
+        imgObj.src = imgUrl;
+        imgObj.classList.add('thumb-img', 'rounded', 'border');
+        if (index === 0) imgObj.classList.add('active');
+
+        // Sự kiện khi click vào ảnh nhỏ
+        imgObj.addEventListener('click', function () {
+          // Thay ảnh chính
+          mainImg.src = imgUrl;
+
+          // Đổi trạng thái active
+          document.querySelectorAll('.thumb-img').forEach(t => t.classList.remove('active'));
+          imgObj.classList.add('active');
+        });
+
+        thumbContainer.appendChild(imgObj);
+      });
+
+    } else {
+      document.querySelector('.container').innerHTML = `<div class="text-center mt-5"><h3>Sản phẩm không tồn tại!</h3><a href="san-pham.html" class="btn btn-primary">Quay lại</a></div>`;
+    }
+  </script>
+</body>
+
+</html>

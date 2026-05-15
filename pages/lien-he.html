@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-warning" href="../index.html"><i class="bi bi-flower2"></i> ALICE STORE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="san-pham.html">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="lien-he.html">Liên Hệ</a></li>
+                </ul>
+                <form class="d-flex me-2">
+                    <input class="form-control form-control-sm me-2" type="search" placeholder="Tìm trang sức...">
+                    <button class="btn btn-outline-warning btn-sm" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#"><i class="bi bi-cart3"></i> Giỏ hàng</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- --------------------------------- -->
+
+    <main class="container mt-4">
+        <div class="row g-4">
+            <div class="col-md-7">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="h4 mb-3">Gửi tin nhắn cho chúng tôi</h2>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Họ và tên</label>
+                                <input type="text" class="form-control" placeholder="Nguyễn Văn A" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="example@gmail.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Nội dung</label>
+                                <textarea class="form-control" rows="5" placeholder="Vui lòng nhập nội dung..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Gửi liên hệ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="bg-primary text-white rounded p-4 h-100">
+                    <h3 class="h5">Thông tin liên hệ</h3>
+                    <ul class="list-unstyled mt-3 mb-0">
+                        <li class="mb-2"><strong>Địa chỉ:</strong> 123 Đường ABC, Quận 1</li>
+                        <li class="mb-2"><strong>Hotline:</strong> 0900 000 000</li>
+                        <li class="mb-2"><strong>Email:</strong> support@example.com</li>
+                        <li class="mb-0"><strong>Giờ làm việc:</strong> 08:00 - 17:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-dark text-light mt-5 pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 border-end border-secondary">
+                    <h5 class="text-warning mb-4">GEM STORE</h5>
+                    <p class="text-secondary small">
+                        Chúng tôi tự hào là thương hiệu phụ kiện hàng đầu, mang lại vẻ đẹp tự tin và sang trọng cho phụ
+                        nữ Việt Nam thông qua những mẫu trang sức tinh xảo.
+                    </p>
+                    <div class="fs-4">
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4 border-end border-secondary ps-md-5">
+                    <h5 class="text-uppercase text-warning mb-4 small">Liên kết</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Chính sách vận
+                                chuyển</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Chính sách bảo mật</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Đổi trả & Hoàn tiền</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Câu hỏi thường gặp</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4 ps-md-5">
+                    <h5 class="text-uppercase text-warning mb-4 small">Liên hệ</h5>
+                    <p class="text-secondary small mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Đường ABC, Quận 1, TP.
+                        HCM</p>
+                    <p class="text-secondary small mb-2"><i class="bi bi-telephone me-2"></i> Hotline: 1900 1234</p>
+                    <p class="text-secondary small mb-2"><i class="bi bi-envelope me-2"></i> hotro@gemstore.com</p>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="text-center">
+                <p class="small text-secondary mb-0">&copy; 2026 GEM STORE - All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

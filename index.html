@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Bán Hàng | Phụ Kiện Thời Trang</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-warning" href="index.html"><i class="bi bi-flower2"></i> ALICE STORE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/san-pham.html">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/lien-he.html">Liên Hệ</a></li>
+                </ul>
+                <form class="d-flex me-2">
+                    <input class="form-control form-control-sm me-2" type="search" placeholder="Tìm trang sức...">
+                    <button class="btn btn-outline-warning btn-sm" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#"><i class="bi bi-cart3"></i> Giỏ hàng</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- --------------------------------- -->
+
+    <header class="container mt-4">
+        <div id="heroCarousel" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://picsum.photos/id/1050/1200/400" class="d-block w-100" alt="Bộ sưu tập hè">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                        <h5>Bộ Sưu Tập Mùa Xuân 2026</h5>
+                        <p>Giảm giá lên đến 50% cho các dòng trang sức cao cấp.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/id/1055/1200/400" class="d-block w-100" alt="Phụ kiện cao cấp">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+                    <h4 class="m-0 text-uppercase fw-bold">Sản phẩm mới nhất</h4>
+                    <a href="pages/san-pham.html" class="text-decoration-none text-primary small">Xem tất cả <i
+                            class="bi bi-arrow-right"></i></a>
+                </div>
+
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card p-2 shadow-sm border-0 h-100">
+                            <span class="badge bg-danger position-absolute m-2" style="z-index: 1;">HOT</span>
+                            <img src="M:\webbanhang\images\buom-vong-co_1.jpg" class="card-img-top rounded"
+                                alt="Vòng cổ bướm">
+                            <div class="card-body px-1 d-flex flex-column">
+                                <h5 class="card-title h6 fw-bold">Vòng Cổ Butterfly 2026</h5>
+                                <div class="mb-2 mt-auto">
+                                    <span class="price text-danger fw-bold">129.000₫</span>
+                                </div>
+                                <a href="pages/chi-tiet.html?id=1" class="btn btn-dark btn-sm w-100">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card p-2 shadow-sm border-0 h-100">
+                            <img src="M:\webbanhang\images\xinh-vong-co_2.jpg" class="card-img-top rounded"
+                                alt="Thép Titan">
+                            <div class="card-body px-1 d-flex flex-column">
+                                <h5 class="card-title h6 fw-bold">Vòng Cổ Phù Thủy Xứ Oz</h5>
+                                <div class="mb-2 mt-auto">
+                                    <span class="price text-danger fw-bold">350.000₫</span>
+                                </div>
+                                <a href="pages/chi-tiet.html?id=2" class="btn btn-dark btn-sm w-100">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card p-2 shadow-sm border-0 h-100">
+                            <img src="M:\webbanhang\images\lac-bi-bac-1.jpg" class="card-img-top rounded" alt="Lắc tay">
+                            <div class="card-body px-1 d-flex flex-column">
+                                <h5 class="card-title h6 fw-bold">Lắc Tay Bạc S925 Đính Đá</h5>
+                                <div class="mb-2 mt-auto">
+                                    <span class="price text-danger fw-bold">490.000₫</span>
+                                </div>
+                                <a href="pages/chi-tiet.html?id=3" class="btn btn-dark btn-sm w-100">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card p-2 shadow-sm border-0 h-100">
+                            <img src="M:\webbanhang\images\buom-vong-co.jpg" class="card-img-top rounded" alt="Vòng cổ">
+                            <div class="card-body px-1 d-flex flex-column">
+                                <h5 class="card-title h6 fw-bold">Dây Chuyền Bướm Trắng</h5>
+                                <div class="mb-2 mt-auto">
+                                    <span class="price text-danger fw-bold">150.000₫</span>
+                                </div>
+                                <a href="pages/chi-tiet.html?id=1" class="btn btn-dark btn-sm w-100">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-warning text-dark fw-bold border-0 text-center small">
+                        KẾT NỐI VỚI CHÚNG TÔI
+                    </div>
+                    <div class="card-body p-2">
+                        <div class="d-grid gap-2">
+                            <a href="#" class="btn btn-primary btn-sm text-start border-0"
+                                style="background-color: #3b5998;">
+                                <i class="bi bi-facebook me-2"></i> Facebook
+                            </a>
+                            <a href="#" class="btn btn-danger btn-sm text-start border-0"
+                                style="background-color: #e4405f;">
+                                <i class="bi bi-instagram me-2"></i> Instagram
+                            </a>
+                            <a href="#" class="btn btn-dark btn-sm text-start">
+                                <i class="bi bi-tiktok me-2"></i> TikTok
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light mt-5 pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 border-end border-secondary">
+                    <h5 class="text-warning mb-4">GEM STORE</h5>
+                    <p class="text-secondary small">
+                        Chúng tôi tự hào là thương hiệu phụ kiện hàng đầu, mang lại vẻ đẹp tự tin và sang trọng cho phụ
+                        nữ Việt Nam thông qua những mẫu trang sức tinh xảo.
+                    </p>
+                    <div class="fs-4">
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4 border-end border-secondary ps-md-5">
+                    <h5 class="text-uppercase text-warning mb-4 small">Liên kết</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Chính sách vận
+                                chuyển</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Chính sách bảo mật</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Đổi trả & Hoàn tiền</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Câu hỏi thường gặp</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4 ps-md-5">
+                    <h5 class="text-uppercase text-warning mb-4 small">Liên hệ</h5>
+                    <p class="text-secondary small mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Đường ABC, Quận 1, TP.
+                        HCM</p>
+                    <p class="text-secondary small mb-2"><i class="bi bi-telephone me-2"></i> Hotline: 1900 1234</p>
+                    <p class="text-secondary small mb-2"><i class="bi bi-envelope me-2"></i> hotro@gemstore.com</p>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="text-center">
+                <p class="small text-secondary mb-0">&copy; 2026 GEM STORE - All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
